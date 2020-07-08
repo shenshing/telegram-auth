@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: "koompi-play-telegram"
+    restart: always
+    working_dir: /koompi-play-telegram
+    ports:
+      - "8000:8000"
+      - "38776:38776"
+      - "38780:38780"
+    volumes:
+      - .:/koompi-play-telegram
+    command: "uvicorn app.main:app --reload --host 0.0.0.0"

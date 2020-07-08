@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build -t koompi-play-telegram .
+docker-compose up -d
